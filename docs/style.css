@@ -1,24 +1,25 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: rgb(43, 43, 43);
 }
 
 .img-gh {
     position: absolute;
-    left: 10%;
-    top: 45%; /* Adjust as needed to position the image above the title */
+    left: 12.5%;
+    top: 8rem; /* Adjust as needed to position the image above the title */
+    z-index: 2;
 }
 
 .img-gh img {
     width: 40px; /* Adjust the size of the image */
     height: auto;
+  
 }
 .img-insta {
     position: absolute;
-    left: 13%;
-    top: 45%; /* Adjust as needed to position the image above the title */
+    left: 14.5%;
+    top: 8rem; /* Adjust as needed to position the image above the title */
+    z-index: 2;
 }
 
 .img-insta img {
@@ -29,16 +30,18 @@ body {
 .title {
     font-family: Stencil Std, fantasy;
     position: absolute;
-    top: 50%; /* Position the title lower to make room for the image */
-    left: 30%;
+    top: 14rem; /* Position the title lower to make room for the image */
+    left: 23%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 6em;
-    text-align: center;
-    z-index: 2; /* Ensure the title stays above the video */
+    text-align: left;
+    z-index: 1; /* Ensure the title stays above the video */
+  
 }
 
 #myVideo {
+    border-radius: 25px;
     top: 0;
     left: 0;
     width: 100%;
@@ -47,27 +50,12 @@ body {
     z-index: -1;
 }
 
-figure {
-    margin: 0;
-    padding: 0;
-}
-main{
-  
-}
+
+
 .who{
     
     background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(95,95,129,1) 31%, rgba(42,42,75,1) 71%, rgba(2,38,46,1) 100%);
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
 }
 
-    
-    .img-who { grid-area: 1 / 1 / 6/ 3;
-        
-     }
-    .div3 { grid-area: 1 / 3 / 2 / 5; }
-    .div4 { grid-area: 2 / 3 / 6 / 6; }
+   
