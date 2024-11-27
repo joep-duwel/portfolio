@@ -1,61 +1,259 @@
+/* Algemene body instellingen */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Andale Mono, monospace;
     background-color: rgb(43, 43, 43);
-}
-
-.img-gh {
-    position: absolute;
-    left: 12.5%;
-    top: 8rem; /* Adjust as needed to position the image above the title */
-    z-index: 2;
-}
-
-.img-gh img {
-    width: 40px; /* Adjust the size of the image */
-    height: auto;
-  
-}
-.img-insta {
-    position: absolute;
-    left: 14.5%;
-    top: 8rem; /* Adjust as needed to position the image above the title */
-    z-index: 2;
-}
-
-.img-insta img {
-    width: 40px; /* Adjust the size of the image */
-    height: auto;
-}
-
-.title {
-    font-family: Stencil Std, fantasy;
-    position: absolute;
-    top: 14rem; /* Position the title lower to make room for the image */
-    left: 23%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 6em;
-    text-align: left;
-    z-index: 1; /* Ensure the title stays above the video */
-  
-}
-
-#myVideo {
-    border-radius: 25px;
-    top: 0;
-    left: 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 40rem;
+    height: 100%;
+    overflow-y: auto; /* Zorgt ervoor dat de pagina kan scrollen */
+    color: white;
+}
+.error{
+    justify-content: center;
+}
+
+/* Container instellingen voor de hele inhoud */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px; /* Ruimte tussen de cards */
+    padding: 20px;
+}
+
+/* Basisinstellingen voor de kaarten */
+.cards {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparant wit met een beetje opaciteit */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+/* Card voor projectafbeeldingen */
+.porf {
+    width: 300px;
+    height: 400px;
+}
+
+/* Styling voor de projecten en afbeeldingen */
+.projects a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Projectafbeelding styling */
+.project-img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    z-index: -1;
+    transition: transform 0.3s ease;
 }
 
-
-
-.who{
-    
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(95,95,129,1) 31%, rgba(42,42,75,1) 71%, rgba(2,38,46,1) 100%);
+/* Card2 styling (de grotere projectcontainer) */
+.card2 {
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparant wit met een beetje opaciteit */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    overflow: hidden;
 }
 
-   
+/* Styling voor de projecten sectie */
+.projects {
+    text-align: center;
+    color: white;
+}
+
+.projects h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Algemene instellingen voor projectcards (pro-1 en pro-2) */
+.pro-1, .pro-2 {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-effect voor de projectcards */
+.pro-1:hover, .pro-2:hover {
+    transform: scale(1.05); /* Vergroot de kaart een beetje bij hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Versterkt de schaduw bij hover */
+}
+
+/* Hover-effect voor de grotere card (card2) */
+
+
+/* Styling voor de afbeeldingen in de projectcards */
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt bijgesneden */
+}
+
+/* Styling voor de beschrijvingstekst onder de afbeelding */
+.pro-1 p, .pro-2 p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.pro-1 h2, .pro-2 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Zorg ervoor dat de projectcontainer horizontaal scrollt als nodig */
+.projects {
+    width: 100%;
+    overflow-x: auto; /* Dit zorgt ervoor dat de projecten horizontaal scrollen als ze te breed zijn */
+    padding-bottom: 20px;
+}
+
+/* Zorg ervoor dat de projectcards in de container goed uitgelijnd zijn */
+.pro-1, .pro-2 {
+    margin-left: 25px;
+    width: 90%;
+    overflow-y: auto;
+
+}
+
+/* Hover effect voor de card zelf */
+.cards:hover {
+    transform: translateY(-10px); /* Verplaatst de card iets omhoog bij hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling voor de textuele secties (over jezelf) */
+.textpro {
+    margin: 1rem;
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Verbergt de tekst totdat de animatie klaar is */
+    border-right: .15em solid rgb(240, 237, 231); /* Typemachine cursor */
+    white-space: nowrap; /* Zorgt ervoor dat de tekst op één lijn blijft */
+    animation: typing 3.5s steps(40, end) forwards, 
+               blink-caret .75s step-end infinite;
+}
+
+/* Typing effect voor de naam */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking caret effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(226, 225, 223); }
+}
+
+/* Styling voor de job titel */
+.job {
+    margin-bottom: 2rem;
+}
+
+/* Afbeelding styling voor social media links */
+.img-link img {
+    width: 40px;
+    height: auto;
+}
+
+/* Styling voor de container van de social media links */
+.img-link-container {
+    font-size: 0; /* Verwijdert extra witruimte */
+}
+
+/* Styling voor de navigatie links */
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgb(156, 89, 255); /* Paars hover effect */
+}
+/* Styling voor de .cart-school cards */
+.cart-school.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparant wit met een beetje opaciteit */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Maximale breedte van de card */
+    margin: 20px auto;
+}
+
+/* Styling voor de schoolen div */
+.schoolen {
+    text-align: center;
+}
+
+/* Styling voor de titel van de schoolen */
+.schoolen h1 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Styling voor de link */
+.schoolen a {
+    text-decoration: none;
+}
+
+/* Styling voor de paragraaf met schoolinformatie */
+.schoolen p {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Styling voor het logo */
+.sl-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle; /* Zorgt ervoor dat het logo goed uitgelijnd is met de tekst */
+}
+
+/* Indien je een hover-effect wilt voor de card */
+.cart-school.cards:hover {
+    transform: translateY(-10px); /* Verplaatst de card omhoog bij hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Versterkt de schaduw bij hover */
+    transition: all 0.3s ease;
+}
+.list-sch{
+   margin: 1rem;
+}
