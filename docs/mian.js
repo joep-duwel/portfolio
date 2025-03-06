@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Verwijder de cursor na 3 seconden
       setTimeout(() => {
         typewriter.style.borderRight = "none"; // Verwijder de cursor
-      }, 3000); // Na 3 seconden
+      },0); // Na  seconden
     }
   });
 });
