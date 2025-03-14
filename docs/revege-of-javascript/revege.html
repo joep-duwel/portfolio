@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>duwelfruit</title>
+    <link rel="stylesheet" href="../revege-of-javascript/rev.css">
+    <script src="https://kit.fontawesome.com/72d0400ab1.js" crossorigin="anonymous"> </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="parallax">
+            <div class="page-title">duwelfruit</div>
+        </div>
+        <div class="menu " id="sticky">
+            <ul class="menu-ul">
+                <a href="#home" class="menu-a">
+                    <li>home</li>
+                </a>
+                <a href="#deals" class="menu-a">
+                    <li>deals</li>
+                </a>
+                <a href="#apple" class="menu-a">
+                    <li>appels </li>
+                </a>
+                <a href="#strawberry" class="menu-a">
+                    <li>aardbeien</li>
+                </a>
+                <a href="#" class="menu-a">
+                    <li>cart</li>
+                </a>
+            </ul>
+            <div class="search-box">
+                <form id="search-form">
+                    <input type="text" placeholder="zoeken..." name="search" id="search-input" class="search-input" />
+                    <button type="button" onclick="searchItems()"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--home pagina begint-->
+        <div class="container">
+            <a href="#apple">
+                <div class="categories">
+                    <img src="/img/arlet.jpg" alt="" srcset="" class="item-img">
+                    <div class="image-title">appels</div>
+                </div>
+            </a>
+            <a href="#strawberry">
+                <div class="categories">
+                    <img src="/img/aardbeien.jpg" alt="" srcset="" class="item-img">
+                    <div class="image-title">aardbeien</div>
+                </div>
+            </a>
+
+        </div>
+
+        <!--appels begint-->
+        <div class="deals-container" id="apple">
+            <div class="parallax">
+                <div class="title">appels</div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/elstar.jpg" alt="elstar appel" class="item-img-size">
+                </div>
+                <div class="descripstoin"> <b>elstar appel</b> <br>
+                    <div class="item-select">
+                        prijs : € 1,86/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/GrannySmith.jpg" alt="Granny Smith" class="item-img-size">
+                </div>
+
+                <div class="descripstoin"> <b>Granny Smith</b> <br>
+                    <div class="item-select">
+                        prijs : €2,99/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+
+            <div class="items">
+                <div class="images">
+                    <img src="/img/RoyalGala.jpg" alt="Royal Gala appel" class="item-img-size">
+                </div>
+
+                <div class="description"> <b>Royal Gala</b> <br>
+                    <div class="item-select">
+                        prijs : € 2.19/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+        </div>
+        <!--appels eindig-->
+        <!--strayberry begint-->
+        <div class="deals-container" id="strawberry">
+            <div class="parallax">
+                <div class="title">aardbeien</div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/sonata-vrucht-1.jpg" alt="Sonata" class="item-img-size">
+                </div>
+                <div class="descripstoin"> <b>Sonata</b> <br>
+                    <div class="item-select">
+                        prijs : € 2.50/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/Daroyal_1-510x383.jpg" alt="Daroyal" class="item-img-size">
+                </div>
+
+                <div class="descripstoin"> <b>Daroyal </b> <br>
+                    <div class="item-select">
+                        prijs : €2,99/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+
+            <div class="items">
+                <div class="images">
+                    <img src="/img/lam.jpg" alt="Lambada" class="item-img-size">
+                </div>
+
+                <div class="description"> <b>Lambada </b> <br>
+                    <div class="item-select">
+                        prijs : € 2,29/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/korona-aardbei.jpg" alt="Korona" class="item-img-size">
+                </div>
+
+                <div class="description"> <b>Korona </b> <br>
+                    <div class="item-select">
+                        prijs : € 2,95/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/elsanta_1.jpg" alt="Elsanta" class="item-img-size">
+                </div>
+
+                <div class="description"> <b>Elsanta </b> <br>
+                    <div class="item-select">
+                        prijs : € 4,29/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/faint.jpg" alt="Faith" class="item-img-size">
+                </div>
+
+                <div class="description"> <b>Faith </b> <br>
+                    <div class="item-select">
+                        prijs : € 2,99/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/mis.jpg" alt="Mieze Schindler" class="item-img-size">
+                </div>
+
+                <div class="description"> <b>Mieze Schindler </b> <br>
+                    <div class="item-select">
+                        prijs : € 1,95/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="images">
+                    <img src="/img/snow.png" alt="Snow White" class="item-img-size">
+                </div>
+
+                <div class="description"> <b>Snow White </b> <br>
+                    <div class="item-select">
+                        prijs : € 2,49/1kg
+                    </div>
+                    <label>hoeveelheid:</label>
+                    <select class="item-select">
+                        <option>500gr</option>
+                        <option>750gr</option>
+                        <option>1000gr</option>
+                    </select><br>
+                    <button class="buynow-btn">koop</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!--strayberry eindig-->
+    <!--home pagina eindig-->
+    <footer>
+        <div class="parallax1">
+            <div class="footer">
+                <div class="quick-links">
+                    <div>locatie</div>
+                    <ul>
+                        <li><a href="" class="a-links">addres</a></li>
+                    </ul>
+                    <div>contact</div>
+                    <ul>
+                        <li><a href="#" class="a-links">contact ons</a></li>
+                        <li><a href="#" class="a-links">FAQ</a></li>
+                        <li><a href="#" class="a-links">help</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="coppyright"></div>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
