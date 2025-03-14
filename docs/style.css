@@ -8,6 +8,7 @@ body {
     overflow-y: auto;
     color: white;
     content: center;
+    
   }
   
   .error {
@@ -67,6 +68,9 @@ body {
     color: white;
     overflow-x: auto;
     padding: 20px;
+    max-height: 800px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
   }
   
   .projects h1 {

@@ -5,7 +5,7 @@ body {
 
 .parallax,
 .parallax1 {
-    background-image: url(/img/fruit-minste-suiker-top-25-1170x500.webp);
+    background-image: url(../revege-of-javascript/imgrev/fruit-minste-suiker-top-25-1170x500.webp);
     height: max-content;
     background-attachment: fixed;
     background-position: center;
