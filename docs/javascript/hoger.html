@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="../javascript/hoger.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="credits">
+            <span class="player-credits">7</span> <strong>Player Credits</strong> | <span class="computer-credits">7</span> <strong>Computer Credits</strong>
+        </div>
+
+        <div class="dice-container">
+            <div class="player-dice">
+                <span class="player-dice-one">&#9856;</span>
+                <span class="player-dice-two">&#9856;</span>
+                <div class="label">Player</div>
+            </div>
+            <div class="computer-dice">
+                <span class="computer-dice-one">&#9856;</span>
+                <span class="computer-dice-two">&#9856;</span>
+                <div class="label">Computer</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="go-button">Go</button>
+            <button class="dice-button">Throw Dice</button>
+            <button class="higher-button">Higher</button>
+            <button class="lower-button">Lower</button>
+            <button class="same-button">Same</button>
+            <button class="re">Reset</button>
+            <button class="re-yes hidden">Yes, Reset</button>
+        </div>
+
+        <div class="message-box">
+            Welcome! Choose Higher, Lower or Same after each roll.
+        </div>
+
+        <div class="rules hidden">
+            <h3>Game Rules:</h3>
+            <ul>
+                <li>Higher: Choose if you think your dice roll will be higher than the computer's.</li>
+                <li>Lower: Choose if you think your dice roll will be lower than the computer's.</li>
+                <li>Same: Choose if you think the sum of your dice will be the same as the computer's.</li>
+            </ul>
+        </div>
+
+        <button class="showRules">Show Rules</button>
+    </div>
+
+    <script src="../javascript/hoger.js"></script>
+    <script src="../backButton.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.credits {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.dice-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dice-container span {
+    font-size: 40px;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.player-dice {
+    color: #4CAF50; /* Green for player */
+}
+
+.computer-dice {
+    color: #f44336; /* Red for computer */
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.buttons button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+.go-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.dice-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.higher-button {
+    background-color: #008CBA;
+    color: white;
+}
+
+.lower-button {
+    background-color: #ff9800;
+    color: white;
+}
+
+.same-button {
+    background-color: #9C27B0;
+    color: white;
+}
+
+.re {
+    background-color: #607D8B;
+    color: white;
+}
+
+.re-yes {
+    background-color: #607D8B;
+    color: white;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.message-box {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.rules {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.showRules {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.showRules:hover {
+    background-color: #45a049;
+}
