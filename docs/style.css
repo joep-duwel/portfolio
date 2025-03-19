@@ -69,6 +69,7 @@ body {
     overflow-x: auto;
     padding: 20px;
     max-height: 800px;
+    min-width: 500px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none; 
   }
@@ -175,12 +176,14 @@ body {
   }
   .schoolen {
     text-align: center;
+    width: auto;
   }
   
   .schoolen h1 {
     color: white;
     font-size: 1.8rem;
     margin-bottom: 10px;
+    
   }
   
   .schoolen a {
@@ -207,6 +210,7 @@ body {
     left: 0;
   }
   
+  
   .skills-icons {
     display: flex;
     justify-content: center;
@@ -218,9 +222,72 @@ body {
     margin: 20px;
   }
   
-
-  
   .skill-icon:hover {
     transform: scale(1.1);
   }
-  
+  .who-card{
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+  }
+  .lees-meer{
+    text-align: center;
+    background-color: white;
+   color: #333;
+   padding: 10px;
+   border-radius: 20px;
+  }
+
+  .aboutme {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom right, #2b2b2b, #1c1c1c);
+  }
+
+  .aboutme h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  .aboutme p {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .info-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .info-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .info-card i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .info-card h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .info-card p {
+    font-size: 1rem;
+  }
