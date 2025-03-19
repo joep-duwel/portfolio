@@ -70,9 +70,26 @@ body {
     padding: 20px;
     max-height: 800px;
     min-width: 500px;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none; 
+    -ms-overflow-style: thin;  /* Voor IE en Edge */
+    scrollbar-width: thin; /* Voor Firefox */
+    scrollbar-color: #fff #333; /* Witte scrollbar met donkere achtergrond voor Firefox */
   }
+  
+  .projects::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .projects::-webkit-scrollbar-thumb {
+    background-color: #fff; /* Witte kleur voor de scrollbar duim */
+    border-radius: 10px; /* Ronde hoeken voor de duim */
+    border: 2px solid #333; /* Optionele rand om de duim */
+  }
+  
+  .projects::-webkit-scrollbar-track {
+    background: #333; /* Achtergrond van de track */
+    border-radius: 10px; /* Ronde hoeken voor de track */
+  }
+  
   
   .projects h1 {
     font-size: 2.5rem;
@@ -302,4 +319,59 @@ body {
 
 .shake-animation {
     animation: shake 0.7s;
+}
+@media screen and (max-width: 1401px) {
+  .projects {
+    min-width: 100%; /* or use another value as needed */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .left-col {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .right-col {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .skills {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .skills-icons {
+    font-size: 40px; /* Verklein de iconen op kleinere schermen */
+    gap: 20px;
+  }
+
+  .info-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    margin: 10px 0;
+  }
+
+  .projects {
+    min-width: 100%;
+  }
+
+  .pro-1, .pro-2 {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
