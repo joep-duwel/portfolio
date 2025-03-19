@@ -16,8 +16,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
+ 
   </head>
   <body>
     <header>
@@ -35,10 +35,7 @@
           <img src="https://flagcdn.com/gb.svg" width="30" alt="English" />
         </a>
       </ul>
-      
     </header>
-
- 
 
     <div class="container">
       <!-- Linker kolom: Profiel en Mijn Scholen -->
@@ -165,7 +162,7 @@
                   </p>
                 </a>
               </div>
-              <div class="pro-1">
+              <div class="pro-2">
                 <a href="revege-of-javascript/revege.html">
                   <h2 class="text-light">
                     sd23-p03-revenge-of-javascript-joep-b1h
@@ -185,8 +182,9 @@
           </div>
         </section>
       </div>
+      
       <section class="skills" id="skil">
-        <div class="cards">
+        <div class="cards card-skills">
           <h1 class="text-light"><strong> mijn code taal</strong></h1>
           <div class="skills-icons">
             <i class="fab fa-html5 skill-icon"></i>
@@ -195,20 +193,63 @@
             <i class="fab fa-php skill-icon"></i>
             <i class="fas fa-database skill-icon"></i>
           </div>
-          
         </div>
         <div class="cards who-card">
           <h1><strong>wie ben ik</strong></h1>
-            <p>ik ben joep Duwel student op roc Mondriaan software developer. <br><br>
-            ik ben al 3 jaar bezig met coderen mijn specialtijde zin javascript html css bootstrap en sql <br> het leukste vind ik om een website echt vorm tegeven 
-            </p>
-            <a class="lees-meer" href="over.html"><strong> lees meer..</strong></a>
+          <p>ik ben joep Duwel student op roc Mondriaan software developer. <br><br>
+          ik ben al 3 jaar bezig met coderen mijn specialiteiten zijn javascript html css bootstrap en sql <br> het leukste vind ik om een website echt vorm te geven.</p>
+          <a class="lees-meer" href="over.html"><strong> lees meer..</strong></a>
         </div>
       </section>
-      
-      <!-- Hier zet je wie ben ik ONDER de skills -->
- 
+    </div>
 
-    <script src="../docs/mian.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const typewriter = document.querySelector(".typewriter h1");
+      typewriter.addEventListener("animationend", (event) => {
+        if (event.animationName === "typing") {
+    
+          setTimeout(() => {
+            typewriter.style.borderRight = "none"; // Verwijder de cursor
+          }); // Na  seconden 0
+        }
+      });
+    });
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectsLink = document.querySelector('a[href="#projects"]');
+        const projectCard = document.querySelector(".card2");
+        const skillsLink = document.querySelector('a[href="#skil"]');
+        const skillsCard = document.querySelector(".card-skills"); // De cards sectie voor skills
+    
+        // Projecten animatie
+        projectsLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Zorgt dat het niet meteen scrollt
+          projectCard.classList.add("shake-animation");
+    
+          // Scroll smooth naar projecten
+          document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+    
+          // Na animatie verwijderen zodat je opnieuw kunt klikken
+          setTimeout(() => {
+            projectCard.classList.remove("shake-animation");
+          }, 500);
+        });
+    
+        // Skills animatie
+        skillsLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Zorgt dat het niet meteen scrollt
+          skillsCard.classList.add("shake-animation");
+    
+          // Scroll smooth naar skills
+          document.getElementById("skil").scrollIntoView({ behavior: "smooth" });
+    
+          // Na animatie verwijderen zodat je opnieuw kunt klikken
+          setTimeout(() => {
+            skillsCard.classList.remove("shake-animation");
+          }, 500);
+        });
+      });
+    </script>
+    
   </body>
 </html>

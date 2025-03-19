@@ -67,7 +67,7 @@
             </div>
             <h2 class="text-light job">Software Developer</h2>
             <p class="text-light">Age: 17 (4/8/2006)</p>
-            <p class="text-light">📌 Den Haag, Nederland</p>
+            <p class="text-light">📌 The Hague, Netherlands</p>
             <p class="text-light">Gmail: Joep48duwel@gmail.com</p>
           </div>
         </div>
@@ -173,7 +173,7 @@
 
       <!-- Skills and Who am I -->
       <section class="skills" id="skil">
-        <div class="cards">
+        <div class="cards card-skills">
           <h1 class="text-light"><strong>My Coding Languages</strong></h1>
           <div class="skills-icons">
             <i class="fab fa-html5 skill-icon"></i>
@@ -196,6 +196,53 @@
       </section>
     </div>
 
-    <script src="../docs/mian.js"></script>
+    <script >
+        document.addEventListener("DOMContentLoaded", () => {
+      const typewriter = document.querySelector(".typewriter h1");
+      typewriter.addEventListener("animationend", (event) => {
+        if (event.animationName === "typing") {
+    
+          setTimeout(() => {
+            typewriter.style.borderRight = "none"; // Verwijder de cursor
+          }); // Na  seconden 0
+        }
+      });
+    });
+    
+        document.addEventListener("DOMContentLoaded", function () {
+          const projectsLink = document.querySelector('a[href="#projects"]');
+          const projectCard = document.querySelector(".card2");
+          const skillsLink = document.querySelector('a[href="#skil"]');
+          const skillsCard = document.querySelector(".card-skills"); // De cards sectie voor skills
+      
+          // Projecten animatie
+          projectsLink.addEventListener("click", function (e) {
+            e.preventDefault(); // Zorgt dat het niet meteen scrollt
+            projectCard.classList.add("shake-animation");
+      
+            // Scroll smooth naar projecten
+            document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+      
+            // Na animatie verwijderen zodat je opnieuw kunt klikken
+            setTimeout(() => {
+              projectCard.classList.remove("shake-animation");
+            }, 500);
+          });
+      
+          // Skills animatie
+          skillsLink.addEventListener("click", function (e) {
+            e.preventDefault(); // Zorgt dat het niet meteen scrollt
+            skillsCard.classList.add("shake-animation");
+      
+            // Scroll smooth naar skills
+            document.getElementById("skil").scrollIntoView({ behavior: "smooth" });
+      
+            // Na animatie verwijderen zodat je opnieuw kunt klikken
+            setTimeout(() => {
+              skillsCard.classList.remove("shake-animation");
+            }, 500);
+          });
+        });
+      </script>
   </body>
 </html>
