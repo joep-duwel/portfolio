@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-  
-
-
     <header>
       <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -34,8 +31,8 @@
           <a class="nav-link text-light" href="#skil">SKILLS</a>
         </li>
         <a href="../index.html">
-            <img src="https://flagcdn.com/nl.svg" width="30" alt="dutch" />
-          </a>
+          <img src="https://flagcdn.com/nl.svg" width="30" alt="dutch" />
+        </a>
       </ul>
     </header>
 
@@ -81,15 +78,19 @@
                 <li>
                   <a href="https://www.sgdc.nl/">
                     <h4 class="text-light">
-                      's-Gravendreef College <br /> Leidschenveen
+                      's-Gravendreef College <br />
+                      Leidschenveen
                     </h4>
                     <p>2019-2023</p>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.rocmondriaan.nl/alle-opleidingen/software-developer-ict">
+                  <a
+                    href="https://www.rocmondriaan.nl/alle-opleidingen/software-developer-ict"
+                  >
                     <h4 class="text-light">
-                      Software Development <br /> ROC Mondriaan
+                      Software Development <br />
+                      ROC Mondriaan
                     </h4>
                     <p>2023-present</p>
                   </a>
@@ -108,6 +109,21 @@
               <h1 class="text-light">My Projects</h1>
 
               <div class="pro-2">
+                <a href="https://github.com/joep-duwel/portfolio">
+                  <h2 class="text-light">Google Chrome Extensions Adblocker</h2>
+                  <img
+                    src="../img/AdBlock.avif"
+                    alt="adblocker"
+                    class="project-img"
+                  />
+                  <p class="text-center">
+                    This is a simple adblocker I created using manifest_version
+                    3.
+                  </p>
+                </a>
+              </div>
+
+              <div class="pro-2">
                 <a href="../games/zeeslag.html">
                   <h2 class="text-light">Battleship</h2>
                   <img
@@ -115,7 +131,9 @@
                     alt="Battleship"
                     class="project-img"
                   />
-                  <p class="text-center">Here I created Battleship using JavaScript.</p>
+                  <p class="text-center">
+                    Here I created Battleship using JavaScript.
+                  </p>
                 </a>
               </div>
               <div class="pro-2">
@@ -126,7 +144,9 @@
                     alt="Bistro Amsterdam"
                     class="project-img"
                   />
-                  <p class="text-center">I challenged myself to build a restaurant website.</p>
+                  <p class="text-center">
+                    I challenged myself to build a restaurant website.
+                  </p>
                 </a>
               </div>
               <div class="pro-2">
@@ -137,7 +157,9 @@
                     alt="Tic Tac Toe"
                     class="project-img"
                   />
-                  <p class="text-center">I created Tic Tac Toe using JavaScript.</p>
+                  <p class="text-center">
+                    I created Tic Tac Toe using JavaScript.
+                  </p>
                 </a>
               </div>
               <div class="pro-2">
@@ -148,7 +170,9 @@
                     alt="Higher or Lower"
                     class="project-img"
                   />
-                  <p class="text-center">This is another project I made in my first year.</p>
+                  <p class="text-center">
+                    This is another project I made in my first year.
+                  </p>
                 </a>
               </div>
               <div class="pro-1">
@@ -162,7 +186,8 @@
                     class="project-img"
                   />
                   <p class="text-center">
-                    This is a school project where I created an online fruit shop.
+                    This is a school project where I created an online fruit
+                    shop.
                   </p>
                 </a>
               </div>
@@ -187,62 +212,69 @@
         <div class="cards who-card">
           <h1><strong>Who am I</strong></h1>
           <p>
-            I am Joep Duwel, a student at ROC Mondriaan studying software development.<br /><br />
-            I've been coding for 3 years. My specialties are JavaScript, HTML, CSS, Bootstrap, and SQL.<br />
+            I am Joep Duwel, a student at ROC Mondriaan studying software
+            development.<br /><br />
+            I've been coding for 3 years. My specialties are JavaScript, HTML,
+            CSS, Bootstrap, and SQL.<br />
             I enjoy designing websites and bringing them to life.
           </p>
-          <a class="lees-meer" href="about_en.html"><strong>Read more...</strong></a>
+          <a class="lees-meer" href="about_en.html"
+            ><strong>Read more...</strong></a
+          >
         </div>
       </section>
     </div>
 
-    <script >
-        document.addEventListener("DOMContentLoaded", () => {
-      const typewriter = document.querySelector(".typewriter h1");
-      typewriter.addEventListener("animationend", (event) => {
-        if (event.animationName === "typing") {
-    
-          setTimeout(() => {
-            typewriter.style.borderRight = "none"; // Verwijder de cursor
-          }); // Na  seconden 0
-        }
-      });
-    });
-    
-        document.addEventListener("DOMContentLoaded", function () {
-          const projectsLink = document.querySelector('a[href="#projects"]');
-          const projectCard = document.querySelector(".card2");
-          const skillsLink = document.querySelector('a[href="#skil"]');
-          const skillsCard = document.querySelector(".card-skills"); // De cards sectie voor skills
-      
-          // Projecten animatie
-          projectsLink.addEventListener("click", function (e) {
-            e.preventDefault(); // Zorgt dat het niet meteen scrollt
-            projectCard.classList.add("shake-animation");
-      
-            // Scroll smooth naar projecten
-            document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-      
-            // Na animatie verwijderen zodat je opnieuw kunt klikken
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const typewriter = document.querySelector(".typewriter h1");
+        typewriter.addEventListener("animationend", (event) => {
+          if (event.animationName === "typing") {
             setTimeout(() => {
-              projectCard.classList.remove("shake-animation");
-            }, 500);
-          });
-      
-          // Skills animatie
-          skillsLink.addEventListener("click", function (e) {
-            e.preventDefault(); // Zorgt dat het niet meteen scrollt
-            skillsCard.classList.add("shake-animation");
-      
-            // Scroll smooth naar skills
-            document.getElementById("skil").scrollIntoView({ behavior: "smooth" });
-      
-            // Na animatie verwijderen zodat je opnieuw kunt klikken
-            setTimeout(() => {
-              skillsCard.classList.remove("shake-animation");
-            }, 500);
-          });
+              typewriter.style.borderRight = "none"; // Verwijder de cursor
+            }); // Na  seconden 0
+          }
         });
-      </script>
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectsLink = document.querySelector('a[href="#projects"]');
+        const projectCard = document.querySelector(".card2");
+        const skillsLink = document.querySelector('a[href="#skil"]');
+        const skillsCard = document.querySelector(".card-skills"); // De cards sectie voor skills
+
+        // Projecten animatie
+        projectsLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Zorgt dat het niet meteen scrollt
+          projectCard.classList.add("shake-animation");
+
+          // Scroll smooth naar projecten
+          document
+            .getElementById("projects")
+            .scrollIntoView({ behavior: "smooth" });
+
+          // Na animatie verwijderen zodat je opnieuw kunt klikken
+          setTimeout(() => {
+            projectCard.classList.remove("shake-animation");
+          }, 500);
+        });
+
+        // Skills animatie
+        skillsLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Zorgt dat het niet meteen scrollt
+          skillsCard.classList.add("shake-animation");
+
+          // Scroll smooth naar skills
+          document
+            .getElementById("skil")
+            .scrollIntoView({ behavior: "smooth" });
+
+          // Na animatie verwijderen zodat je opnieuw kunt klikken
+          setTimeout(() => {
+            skillsCard.classList.remove("shake-animation");
+          }, 500);
+        });
+      });
+    </script>
   </body>
 </html>
