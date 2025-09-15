@@ -17,7 +17,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
- 
   </head>
   <body>
     <header>
@@ -108,7 +107,7 @@
           <div class="card2 cards">
             <div class="projects">
               <h1 class="text-light">Mijn Projecten</h1>
-                 <div class="pro-2">
+              <div class="pro-2">
                 <a href="https://github.com/joep-duwel/add_blocker">
                   <h2 class="text-light">Google Chrome Extensies adblocker</h2>
                   <img
@@ -117,7 +116,8 @@
                     class="project-img"
                   />
                   <p class="text-center">
-                    Dit is een simpele adblocker die ik heb gemaakt met manifest_version 3.
+                    Dit is een simpele adblocker die ik heb gemaakt met
+                    manifest_version 3.
                   </p>
                 </a>
               </div>
@@ -171,7 +171,8 @@
                     class="project-img"
                   />
                   <p class="text-center">
-                    Dit is ook een project dat ik in mijn eerste jaar heb gemaakt.
+                    Dit is ook een project dat ik in mijn eerste jaar heb
+                    gemaakt.
                   </p>
                 </a>
               </div>
@@ -195,67 +196,79 @@
           </div>
         </section>
       </div>
-      
-      <section class="skills" id="skil">
+
+        <section class="skills" id="skil">
         <div class="cards card-skills">
-          <h1 class="text-light"><strong> mijn code taal</strong></h1>
+          <h1 class="text-light"><strong>My Coding Languages</strong></h1>
           <div class="skills-icons">
             <i class="fab fa-html5 skill-icon"></i>
             <i class="fab fa-css3-alt skill-icon"></i>
             <i class="fab fa-js-square skill-icon"></i>
             <i class="fab fa-php skill-icon"></i>
             <i class="fas fa-database skill-icon"></i>
+            <i class="symf"> <img src="../img/symfony_white.png" alt=""></i>
           </div>
         </div>
+   
         <div class="cards who-card">
           <h1><strong>wie ben ik</strong></h1>
-          <p>ik ben joep Duwel student op roc Mondriaan software developer. <br><br>
-          ik ben al 3 jaar bezig met coderen mijn specialiteiten zijn javascript html css bootstrap en sql <br> het leukste vind ik om een website echt vorm te geven.</p>
-          <a class="lees-meer" href="over.html"><strong> lees meer..</strong></a>
+          <p>
+            ik ben joep Duwel student op roc Mondriaan software developer.
+            <br /><br />
+            ik ben al 3 jaar bezig met coderen mijn specialiteiten zijn
+            javascript html css bootstrap en sql <br />
+            het leukste vind ik om een website echt vorm te geven.
+          </p>
+          <a class="lees-meer" href="over.html"
+            ><strong> lees meer..</strong></a
+          >
         </div>
       </section>
     </div>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const typewriter = document.querySelector(".typewriter h1");
-      typewriter.addEventListener("animationend", (event) => {
-        if (event.animationName === "typing") {
-    
-          setTimeout(() => {
-            typewriter.style.borderRight = "none"; // Verwijder de cursor
-          }); // Na  seconden 0
-        }
+      document.addEventListener("DOMContentLoaded", () => {
+        const typewriter = document.querySelector(".typewriter h1");
+        typewriter.addEventListener("animationend", (event) => {
+          if (event.animationName === "typing") {
+            setTimeout(() => {
+              typewriter.style.borderRight = "none"; // Verwijder de cursor
+            }); // Na  seconden 0
+          }
+        });
       });
-    });
       document.addEventListener("DOMContentLoaded", function () {
         const projectsLink = document.querySelector('a[href="#projects"]');
         const projectCard = document.querySelector(".card2");
         const skillsLink = document.querySelector('a[href="#skil"]');
         const skillsCard = document.querySelector(".card-skills"); // De cards sectie voor skills
-    
+
         // Projecten animatie
         projectsLink.addEventListener("click", function (e) {
           e.preventDefault(); // Zorgt dat het niet meteen scrollt
           projectCard.classList.add("shake-animation");
-    
+
           // Scroll smooth naar projecten
-          document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-    
+          document
+            .getElementById("projects")
+            .scrollIntoView({ behavior: "smooth" });
+
           // Na animatie verwijderen zodat je opnieuw kunt klikken
           setTimeout(() => {
             projectCard.classList.remove("shake-animation");
           }, 500);
         });
-    
+
         // Skills animatie
         skillsLink.addEventListener("click", function (e) {
           e.preventDefault(); // Zorgt dat het niet meteen scrollt
           skillsCard.classList.add("shake-animation");
-    
+
           // Scroll smooth naar skills
-          document.getElementById("skil").scrollIntoView({ behavior: "smooth" });
-    
+          document
+            .getElementById("skil")
+            .scrollIntoView({ behavior: "smooth" });
+
           // Na animatie verwijderen zodat je opnieuw kunt klikken
           setTimeout(() => {
             skillsCard.classList.remove("shake-animation");
@@ -263,6 +276,5 @@
         });
       });
     </script>
-    
   </body>
 </html>

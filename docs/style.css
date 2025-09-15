@@ -242,6 +242,16 @@ body {
   .skill-icon:hover {
     transform: scale(1.1);
   }
+.symf img {
+  width: 60px;         
+  height: auto;       
+  filter: brightness(0) invert(1); 
+  transition: transform 0.3s ease;
+}
+
+.symf img:hover {
+  transform: scale(1.2);
+}
   .who-card{
     text-align: center;
     margin-top: 30px;
@@ -268,7 +278,7 @@ body {
 
   .aboutme p {
     max-width: 800px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
     font-size: 1.2rem;
     line-height: 1.8;
   }
@@ -307,6 +317,32 @@ body {
   .info-card p {
     font-size: 1rem;
   }
+  .hobby-img {
+   width: 90px;         
+  height: auto;       
+
+  transition: transform 0.3s ease;
+  }
+  .hobbys-card{
+    text-align: center;
+ 
+  }
+  .me{
+    text-align: center;
+  }
+  .me-container {
+  column-count: 4; 
+  column-gap: 15px; 
+}
+
+.me-container img {
+  width: 100%;
+  margin-bottom: 15px; 
+  display: block;
+  border-radius: 10px;
+}
+
+ 
   @keyframes shake {
     0% { transform: translateY(0); }
     10% { transform: translateY(-10px); }
@@ -375,3 +411,4 @@ body {
     margin: 10px 0;
   }
 }
+
