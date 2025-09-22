@@ -110,8 +110,8 @@ function hitCard() {
 
     if (total > 21) {
         message.textContent = "Busted! Dealer wint!";
-        playerPoints -= betAmount;
-        endRound();
+       
+        determineWinner();
     }
 }
 
