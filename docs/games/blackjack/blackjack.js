@@ -1,10 +1,14 @@
 const dealerDiv = document.querySelector('.dealer-cards');
 const dealerScoreDiv = document.querySelector('.dealer-score');
 const playerDiv = document.querySelector('.player-cards');
+const playerSplitDiv = document.querySelector('.player-cards-split');
 const playerScoreDiv = document.querySelector('.player-score');
+const splitScoreDiv = document.querySelector('.player-score-split');
 const pointsIn = document.querySelector('.player-points-in input');
 const playBtn = document.querySelector('.play');
+const doubleBtn = document.querySelector('.double');
 const hitBtn = document.querySelector('.hit');
+const splitBtn = document.querySelector('.split');
 const standBtn = document.querySelector('.stand');
 const message = document.querySelector('.message');
 const playerPointsDiv = document.querySelector('.player-points');
@@ -12,6 +16,7 @@ const playerPointsDiv = document.querySelector('.player-points');
 let playerPoints = 0;
 let dealerPoints = 0;
 let playerCards = [];
+let splitCards = [];
 let dealerCards = [];
 let betAmount = 0;
 let cash = 50
@@ -23,15 +28,48 @@ playerPointsDiv.textContent =  cash;
 
 hitBtn.style.display = 'none';
 standBtn.style.display = 'none';
+doubleBtn.style.display = 'none';
+splitBtn.style.display = 'none';
 
 playBtn.addEventListener('click', startGame);
 hitBtn.addEventListener('click', hitCard);
 standBtn.addEventListener('click', standCard);
+doubleBtn.addEventListener('click', double);
+splitBtn.addEventListener('click', splitcards);
 
 function drawCard() {
     return Math.floor(Math.random() * 10) + 1; 
 }
 
+function double() {
+    if (cash > betAmount + betAmount ) {
+        doubleBtn.style.display = 'none';
+        doubleplay();
+        
+    } else {
+        message.textContent = "Je hebt niet genoeg punten om te verdubbelen!";
+    }
+}
+
+function doubleplay() {
+    betAmount *= 2;
+    pointsIn.value = betAmount;
+    hitCard();}
+
+
+function split() {
+    if (playerCards[0] === playerCards[1] && cash >= betAmount * 2) {
+    
+
+    } 
+    
+}
+function splitcards() {
+    splitBtn.style.display = 'none';
+    splitCards.push (playerCards.pop());
+    playerDiv.innerHTML = playerCards();
+    renderCardImage();
+}
 
 function renderCardImage(container, value, type) {
     let suffix = value;
@@ -43,7 +81,7 @@ function renderCardImage(container, value, type) {
 
     container.appendChild(img);
 
-    // kleine delay zodat transition werkt
+   
     setTimeout(() => {
         img.classList.add('show');
     }, 50);
@@ -98,9 +136,13 @@ function startGame() {
 
     hitBtn.style.display = 'inline-block';
     standBtn.style.display = 'inline-block';
+    doubleBtn.style.display = 'inline-block';
+    split();
+      console.log(playerCards);
 }
 
 function hitCard() {
+    
     const newCard = drawCard();
     playerCards.push(newCard);
     renderCardImage(playerDiv, newCard, 'player');
