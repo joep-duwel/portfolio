@@ -52,6 +52,7 @@ function double() {
 }
 
 function doubleplay() {
+    doubleBtn.style.display = 'none';
     betAmount *= 2;
     pointsIn.value = betAmount;
     hitCard();}
